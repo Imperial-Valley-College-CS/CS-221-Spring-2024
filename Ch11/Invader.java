@@ -17,6 +17,9 @@ public class Invader
    //constructor(s)
    public Invader(double x, double y)
    {
+      this.userDir = System.getProperty("user.dir");
+      this.userDir += "/PA13_Inheritance/src/main/java/InvaderMatrices";
+      this.matDir = "";
       this.body = new boolean[8][12];
       setBody();     //invoke setBody
    }
