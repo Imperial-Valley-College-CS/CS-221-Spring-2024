@@ -19,10 +19,9 @@ public class Invader
    {
       this.userDir = System.getProperty("user.dir");
       this.userDir += "/PA13_Inheritance/src/main/java/InvaderMatrices";
-      //this.matDir = "";
       this.body = new boolean[8][12];
       this.position = new Position(x, y);
-      //setBody();     //invoke setBody
+      this.isAlive = true;
    }
    
    //methods   
@@ -60,4 +59,13 @@ public class Invader
       }
       
    }//end setBody
+   
+   public boolean hit()
+   {
+      this.health--;    //decrements health by one
+      if( this.health <= 0 )
+         this.isAlive = false;
+         
+      return this.isAlive;
+   }
 }//end Invader
