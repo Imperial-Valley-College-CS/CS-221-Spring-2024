@@ -9,7 +9,7 @@ public class Invader
    //data fields
    protected int health, speedX, speedY;
    protected Color color;
-   //protected Position position;
+   protected Position position;
    protected boolean[][] body;
    protected boolean isAlive;
    protected String userDir, matDir;
@@ -19,9 +19,10 @@ public class Invader
    {
       this.userDir = System.getProperty("user.dir");
       this.userDir += "/PA13_Inheritance/src/main/java/InvaderMatrices";
-      this.matDir = "";
+      //this.matDir = "";
       this.body = new boolean[8][12];
-      setBody();     //invoke setBody
+      this.position = new Position(x, y);
+      //setBody();     //invoke setBody
    }
    
    //methods   
@@ -30,7 +31,7 @@ public class Invader
       return this.body;
    }
    
-   private void setBody()
+   protected void setBody()
    {
       try
       {
