@@ -6,10 +6,10 @@ public class Position
    private double x, y;
    
    //constructor
-   public Position( double x, double y )
+   public Position( double a, double b )
    {
-      this.x = x;
-      this.y = y;
+      this.x = a;
+      this.y = b;
    }
    
    //methods

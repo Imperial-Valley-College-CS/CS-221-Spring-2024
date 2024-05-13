@@ -62,10 +62,11 @@ public class Invader
    
    public boolean hit()
    {
-      this.health--;    //decrements health by one
+      this.health--;    //decrement health by one
       if( this.health <= 0 )
          this.isAlive = false;
          
       return this.isAlive;
    }
+   
 }//end Invader
