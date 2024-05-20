@@ -1,10 +1,16 @@
+import java.util.*;
+
 public class Methods
 {
    public static void main(String[] args)
    {
-      for( int i = 2; i <= 10000; i++ )
-         if( perfectNumber(i) )
-            System.out.println( i );
+      Character[] op = {'+', '*', '/', '-'};
+      HashSet<Character> operators = new HashSet<>(Arrays.asList(op));
+      for( Character c : operators )
+         System.out.println( c );
+      // for( int i = 2; i <= 10000; i++ )
+//          if( perfectNumber(i) )
+//             System.out.println( i );
             
    }//end main
    

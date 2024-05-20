@@ -1,7 +1,7 @@
 public class Card
 {
    private char rank, suit;
-   private String card;
+   private String card = "";
    private int value;
    
    public Card(String symbol)    //symbol = "AH" "10D";
@@ -18,7 +18,7 @@ public class Card
    {
       switch( this.rank )
       {
-         case '2': this.value = 2; break;
+         case '2': this.value = 2; this.card += "Two of "; break;
          case '9': this.value = 9; break;
          case '1':
          case 'J': 
