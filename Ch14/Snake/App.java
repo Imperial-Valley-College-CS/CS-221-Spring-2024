@@ -6,7 +6,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.image.Image;
 import javafx.animation.AnimationTimer;
 import javafx.event.EventHandler;
-import javafx.scene.input.KeyEvent;
+import javafx.scene.input.*;
 import java.util.ArrayList;
 
 public class App extends Application
@@ -21,6 +21,7 @@ public class App extends Application
    Timer timer = new Timer();
    KeyHandler startKey = new KeyHandler();
    KeyHandlerTwo stopKey = new KeyHandlerTwo();
+   MouseHandler mouseHandle = new MouseHandler();
    int x = 50;
    int y = 100;
    int size = 10;
@@ -37,6 +38,7 @@ public class App extends Application
       g.getChildren().add(canvas);
       scene.setOnKeyPressed(startKey);
       scene.setOnKeyReleased(stopKey);
+      scene.setOnDragDetected(mouseHandle);
       s.setScene(scene);
       s.show();
    }
@@ -123,5 +125,13 @@ public class App extends Application
       }
    }//end KeyHandler
    
+   class MouseHandler implements EventHandler<MouseEvent>
+   {
+      @Override
+      public void handle(MouseEvent e)        //handle is abstract, we must override
+      {
+         System.out.println( e.getX() + ", " + e.getY());
+      }
+   }//end KeyHandler
    
 }//end App
